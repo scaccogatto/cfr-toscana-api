@@ -56,4 +56,4 @@ var cycle = () => {
 
 cycle()
 
-setInterval(cycle, 30000)
+setInterval(cycle, 600000)
