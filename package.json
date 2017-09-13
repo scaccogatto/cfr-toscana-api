@@ -1,10 +1,10 @@
 {
   "name": "cfr-toscana-api",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "api per il portale cfr toscana",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build-win": "pkg . --targets win --output bin/cfr-toscana.exe"
   },
   "repository": {
     "type": "git",
@@ -21,9 +21,15 @@
     "url": "https://github.com/scaccogatto/cfr-toscana-api/issues"
   },
   "homepage": "https://github.com/scaccogatto/cfr-toscana-api#readme",
-  "devDependencies": {
-    "mkdirp": "^0.5.1",
-    "node-table-to-csv": "^0.1.0",
-    "phantomjs-prebuilt": "^2.1.14"
+  "devDependencies": {},
+  "dependencies": {
+    "chalk": "^2.1.0",
+    "dateformat": "^2.0.0",
+    "fs-extra": "^4.0.2",
+    "json2csv": "^3.11.2"
+  },
+  "bin": "index.js",
+  "pkg": {
+    "scripts": "plugins/*.js"
   }
 }
